@@ -1,9 +1,12 @@
     <div class="pragmatic_header">
         <div><h1 style=" font-family: 'Palette Mosaic', cursive;">Pragmatic Education</h1></div>
         <div>
-            <span>nav1</span>
-            <span>nav1</span>
-            <span>nav1</span>
+
+            <a href="{% url 'articleapp:list' %}">
+                <span>Articles</span>
+            </a>
+            <span>nav2</span>
+            <span>nav3</span>
             {% if not user.is_authenticated %}
             <a href="{% url 'accountapp:login' %}?next={{ request.path }}">
                 <span>login</span>
