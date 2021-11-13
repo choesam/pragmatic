@@ -1,6 +1,7 @@
 .pragmatic_footer_logo {
 
-font-family: 'Dancing Script', cursive;
+font-family: 'East Sea Dokdo', cursive; font-size:36px
+
 }
 .pragmatic_footer_button{
 font-size: .9rem;
@@ -38,6 +39,7 @@ a:link {
 
 .pragmatic_header_nav {
     margin : 0 0.5rem;
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 .pragmatic_header_navbar {

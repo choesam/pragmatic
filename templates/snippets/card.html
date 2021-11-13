@@ -1,3 +1,25 @@
-        <div>
-            <img src="{{ article.image.url }}" alt="">
-        </div>
+<style>
+.img_text {
+    display: block;
+    text-align: center;
+    width: 95%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    max-height: 90px;
+    overflow: scroll;
+    color: white;
+    font-family: 'Do Hyeon', serif;
+    filter: drop-shadow(1px 1px 5px rgb(0,0,0)) drop-shadow(1px 1px 5px rgb(0,0,0)) drop-shadow(1px 1px 5px rgb(0,0,0));
+    position: absolute;
+    font-size: 1.25rem;
+    }
+.img_text::-webkit-scrollbar {
+    display: none;
+}
+
+</style>
+<div>
+    <img src="{{ article.image.url }}" alt="">
+    <p class="img_text">{{ article.title }}</p>
+</div>
