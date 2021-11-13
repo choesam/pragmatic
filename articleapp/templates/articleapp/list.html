@@ -15,11 +15,10 @@
     }
 
     .container div {
-      width: 250px;
+      width: 280px;
       display: flex;
       justify-content: center;
       align-items: center;
-      
       border-radius: 1rem;
     }
 
@@ -35,11 +34,9 @@
 
 {% if article_list %}
 <div class="container">
-
     {% for article in article_list %}
     <a href="{% url 'articleapp:detail' pk=article.pk %}">
         {% include 'snippets/card.html' with article=article %}
-
     </a>
     {% endfor %}
 </div>

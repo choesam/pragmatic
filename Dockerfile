@@ -2,7 +2,7 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo "testing"
+RUN echo "j_conferense"
 
 RUN git clone https://www.github.com/choesam/pragmatic.git
 

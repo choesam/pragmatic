@@ -24,10 +24,20 @@ class ArticleCreateView(CreateView):
         temp_article = form.save(commit=False)
         temp_article.writer = self.request.user
         temp_article.save()
+
         return super().form_valid(form)
 
     def get_success_url(self):
         return reverse('articleapp:detail', kwargs={'pk': self.object.pk})
+
+    # def get_form_kwargs(self):
+    #     kw = super(ArticleCreateView, self).get_form_kwargs()
+    #     kw['request'] = self.request
+    #     return kw
+    #
+    # def form_valid(self, form):
+    #     form.save(self.request)
+    #     return super(ArticleCreateView, self).form_valid(form)
 
 
 class ArticleDetailView(DetailView, FormMixin):
